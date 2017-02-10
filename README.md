@@ -5,7 +5,7 @@ Execises to connect to websites.
 0. Open up Firefox 45.0 and Firefox Developer toolbar, select the ``Network Monitor`` tab
 1. Go to the website and try to post a vote.
 2. Observe post request. Right click and select ``Copy as cURL``
-3. Paste the curl request in a terminal session, and hit <enter>. Refresh the page to see if it worked.
+3. Paste the curl request in a terminal session, and hit enter. Refresh the page to see if it worked.
 4. If it did, put it in a for loop in bash. ``for ((i=0;i < 1025; i++)); do curl blahblahblah; done``
 <br>
 <p>This works for the first three tasks, then captcha and time restraints come into play. For the next three tasks, google it. Results are below.</p>
