@@ -25,7 +25,7 @@ def request(url):
     return (urllib2.urlopen(c).read())
 
 def renew_connection():
-    conn = TorCtl.connect(controlAddr="127.0.0.1", controlPort=9051, passphrase="shyro339")
+    conn = TorCtl.connect(controlAddr="127.0.0.1", controlPort=9051, passphrase="password")
     conn.send_signal("NEWNYM")
     conn.close()
 
