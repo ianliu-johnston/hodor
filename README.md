@@ -37,28 +37,40 @@ Compiled randomizer function.
 
 ### Level 3:
 <h6>bypass_capcha.py</h6>
+A simple Python2 script to bypass capchas
+#### Links
+* [Bypass Capcha using Python and Tesseract](http://www.debasish.in/2012/01/bypass-captcha-using-python-and.html)
+
+#### Prerequisites:
+* Install tesseract: ``sudo pip install pytesseract``
+<p>tesseract uses the deprecated Python package, PIL. To install the updated version, pillow, I had to install a number of dependencies.</p>
+1. ``sudo apt-get update``
+2. ``sudo apt-get install zlib1g-dev``
+3. ``sudo apt-get install tesseract-orc``
+4. ``sudo pip install pillow``
 
 <h6>random_sleep</h6>
 Compiled randomizer function.
 
 ### Level 4:
 <h6>ip_renew.py</h6>
-A simple Python script to tunnel through the TOR network, using random IP addresses, and POST-ing.
+A simple Python2 script to tunnel through the TOR network, using random IP addresses, and POST-ing.
 
+#### Links
 * [Primary Tutorial](http://sacharya.com/crawling-anonymously-with-tor-in-python/) - from sacharya.com
 
-* Prerequisites:
-  * Install Tor
-  * Install Privoxy
-  * Install PyTorCtl
+#### Prerequisites:
+* Install Tor
+* Install Privoxy
+* Install PyTorCtl
 
-* Brief Summary of the steps in the tutorial:
+#### Brief Summary of the steps in the tutorial:
   1. Install TOR: ``sudo apt-get update; sudo apt-get install tor; sudo /etc/init.d/tor restart``
   2. Configure TOR: ``tor --hash-password password; sed -i 's/#ControlPort 9051/ControlPort 9051/;s/#HashedControlPassword/HashedControlPassword/ /etc/tor/torrc``
   3. Install PyTorCtl: ``git clone git://github.com/aaronsw/pytorctl.git; sudo pip install pytorctl/``
   4. Install Privoxy: ``sudo apt-get install privoxy``
   5. Configure Privoxy: ``sudo sed -i '1338s/^#/forward-socks5 \/localhost:9050 ./' /etc/privoxy/config``
   6. Restart privoxy and tor: ``sudo /etc/init.d/privoxy restart; sudo /etc/init.d/tor restart``
-* Usage:
-  * Run with ``sudo ip_renew.py | grep "" | grep -A3 "28 "``
 
+#### Usage:
+  * Run with ``sudo ip_renew.py | grep "" | grep -A3 "28 "`` To see the results only for the id number 28.
